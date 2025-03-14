@@ -1,14 +1,11 @@
-function WeatherInformations({ weather }) {
+function WeatherInformations ({weather}) {
+    console.log (weather)
 
-    if (!weather || !weather.name || !weather.weather || !weather.weather[0] || !weather.main || !weather.main.feels_like || !weather.main.humidity ||!weather.main.pressure) {
-      return <p>Carregando dados do clima...</p>;  
-    }
-  
-    console.log(weather);
-  
+
+
     return (
-      <div>
-        <h2>{weather.name}</h2>
+        <div>
+             <h2>{weather.name}</h2>
         <div>
           <img
             src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}.png`}
@@ -22,9 +19,18 @@ function WeatherInformations({ weather }) {
             <p>Umidade:{weather.main.humidity}</p>
             <p>Pressão:{weather.main.pressure}</p>
         </div>
-      </div>
-    );
-  }
-  
-  export default WeatherInformations;
-  
+            
+          
+           
+            
+           
+            
+         
+
+
+        </div>
+    )
+
+}
+
+export default WeatherInformations
