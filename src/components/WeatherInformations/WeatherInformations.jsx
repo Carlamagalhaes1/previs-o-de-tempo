@@ -1,6 +1,6 @@
 function WeatherInformations({ weather }) {
 
-    if (!weather || !weather.name || !weather.weather || !weather.weather[0] || !weather.main) {
+    if (!weather || !weather.name || !weather.weather || !weather.weather[0] || !weather.main || !weather.main.feels_like || !weather.main.humidity ||!weather.main.pressure) {
       return <p>Carregando dados do clima...</p>;  
     }
   
@@ -18,9 +18,9 @@ function WeatherInformations({ weather }) {
         </div>
         <p>{weather.weather[0].description}</p>
         <div>
-            <p></p>
-            <p></p>
-            <p></p>
+            <p>Sensação Termica: {Math.round(weather.main.feels_like)}</p>
+            <p>Umidade:{weather.main.humidity}</p>
+            <p>Pressão:{weather.main.pressure}</p>
         </div>
       </div>
     );
