@@ -1,3 +1,5 @@
+
+
 function WeatherInformations ({weather}) {
     console.log (weather)
 
