@@ -3,7 +3,7 @@ import "./WeatherInformations.css"
 
 function WeatherInformations ({weather}) {
     
-    console.log (weather)
+ 
 
 
 
