@@ -21,21 +21,31 @@ function WeatherInformations5Days ({weather5Days}) {
     
 
      const next5DaysForecast = Object.values(dailyForecast).slice(1,6)
-     console.log(next5DaysForecast)
+      function convertDate(date) {
+        const newDate = new Date (date.dt * 1000).toLocaleDateString('pt-BR', { weekday: 'long', day: '2-digit'})
+         return newDate
+        
+      }
 
    
 
 
     return (
         <div className="weather-container">
-            <p>5 days</p>
-           {/*} {next5DaysForecast.map[forecast => (
-                <div key={forecast.dt}>
-                    <p>Quarta</p>
+            <h3>Previsão Próximos 5 dias</h3>
+            <div className="weather-list">
+            {next5DaysForecast.map(forecast => (
+                <div key={forecast.dt } className="weather-item">
+                    <p className="forecast-day">{convertDate(forecast)}</p>
                     <img src={`http://openweathermap.org/img/wn/${forecast.weather[0].icon}.png`} />
+                    <p className="forecast-desc">{forecast.weather[0].description}</p>
+                    <p>{Math.round(forecast.main.temp_min)} ℃ min / {Math.round(forecast.main.temp_max)} ℃ max</p>
                 </div>
-            )]}
-            <p></p>*/}
+            ))}
+            </div>
+            
+           
+            <p></p>
           
            
             
