@@ -20,8 +20,8 @@ function WeatherInformations5Days ({weather5Days}) {
 
     
 
-   // const next5DaysForecast = Object.values(dailyForecast).slice(1,6)
-    //console.log(next5DaysForecast)
+     const next5DaysForecast = Object.values(dailyForecast).slice(1,6)
+     console.log(next5DaysForecast)
 
    
 
