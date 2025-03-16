@@ -8,7 +8,7 @@ import WeatherInformations5Days from './components/WeatherInformations5Days/Weat
 
 function App() {
   const [weather, setWeather] = useState()
-  const [weather5days, setWeather5days] = useState()
+  const [weather5Days, setWeather5Days] = useState()
   const inputRef = useRef()
 
   async function searchCity(){
@@ -20,7 +20,7 @@ function App() {
     
     const apiInfo = await axios.get(url)
     const urlinfodays = await axios.get(url5Days)
-    setWeather5days(urlinfodays.data)
+    setWeather5Days(urlinfodays.data)
 
     setWeather(apiInfo.data)
    
@@ -34,7 +34,7 @@ function App() {
         <h1>Previçãoo do Tempo</h1>
         <input type="text" ref={inputRef} placeholder='Digite o nome da cidade' /> <button onClick={searchCity}> Buscar</button>
         {weather && <WeatherInformations weather={weather}/>}
-        {weather5days && <WeatherInformations5Days weather5days={weather5days}/>}
+        {weather5Days && <WeatherInformations5Days weather5Days={weather5Days}/>}
         
 
       </div>
