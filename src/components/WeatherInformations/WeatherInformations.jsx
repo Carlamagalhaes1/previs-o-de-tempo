@@ -21,7 +21,7 @@ function WeatherInformations ({weather}) {
         <p className="desc">{weather.weather[0].description}</p>
         
         <div className="det">
-            <p>Sensação Termica: {Math.round(weather.main.feels_like)}</p>
+            <p>Sensação Termica:: {Math.round(weather.main.feels_like)}</p>
             <p>Umidade:{weather.main.humidity}</p>
             <p>Pressão:{weather.main.pressure}</p>
         </div>
