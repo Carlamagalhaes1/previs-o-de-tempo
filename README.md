@@ -34,6 +34,6 @@ npm run dev
 5. Acesse no navegador:
 http://localhost:5174/
 
-Feito com 💙 usando React, Vite e OpenWeatherMap API. 
+Feito com 💙 usando React, Vite e OpenWeatherMap API!
 
 
