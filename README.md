@@ -1,12 +1,39 @@
-# React + Vite
+# Previsão de Tempo 🌤️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Previsão de Tempo** é um aplicativo web feito com **React**, **JavaScript**, **CSS** e **Vite**, que permite consultar o clima atual e a previsão dos próximos dias de qualquer cidade do mundo, usando a API do **OpenWeatherMap**.
 
-Currently, two official plugins are available:
+## 🔧 Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- JavaScript (ES6+)
+- CSS
+- [OpenWeatherMap API](https://openweathermap.org/api)
 
-## Expanding the ESLint configuration
+## 🌐 Funcionalidades
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Buscar clima atual por cidade
+- Exibir:
+  - Temperatura atual
+  - Sensação térmica
+  - Umidade
+  - Descrição do clima
+  - Ícones conforme a condição do tempo
+- Exibir **previsão para os próximos 5 dias**
+
+## 🚀 Como rodar o projeto localmente
+
+1. Clone o repositório:
+git clone https://github.com/seu-usuario/previsao-de-tempo.git
+2. Acesse o repositório do projeto :
+cd previcao_do_tempo
+3. Instale as dependências:
+npm install
+4. Execute o servidor de desenvolvimento:
+npm run dev
+5. Acesse no navegador:
+http://localhost:5174/
+
+Feito com 💙 usando React, Vite e OpenWeatherMap API!
+
+
