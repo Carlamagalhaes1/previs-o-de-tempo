@@ -41,6 +41,8 @@ function App() {
   }
 
   return (
+    <div>
+    
     
     <div className="container">
       
@@ -58,12 +60,14 @@ function App() {
       </div>
       
 
-      {loading && <p className="loading">Carregando dados...</p>}
+     
+    </div>
+     {loading && <p className="loading">Carregando dados...</p>}
       {error && <p className="error">{error}</p>}
 
       {!loading && weather && <WeatherInformations weather={weather} />}
       {!loading && weather5Days && <WeatherInformations5Days weather5Days={weather5Days} />}
-    </div>
+      </div>
   );
 }
 
