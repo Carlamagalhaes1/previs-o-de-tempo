@@ -41,7 +41,9 @@ function App() {
   }
 
   return (
+    
     <div className="container">
+      
       <h1 className="title">Previsão do Tempo</h1>
 
       <div className="search-box">
@@ -54,6 +56,7 @@ function App() {
           <FaSearch /> Buscar
         </button>
       </div>
+      
 
       {loading && <p className="loading">Carregando dados...</p>}
       {error && <p className="error">{error}</p>}
