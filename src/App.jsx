@@ -3,6 +3,7 @@ import axios from 'axios';
 import './App.css';
 import WeatherInformations from './components/WeatherInformations/WeatherInformations';
 import WeatherInformations5Days from './components/WeatherInformations5Days/WeatherInformations5Days';
+import { FaSearch } from 'react-icons/fa';
 
 function App() {
   const [weather, setWeather] = useState();
@@ -30,7 +31,7 @@ function App() {
       setWeather(apiInfo.data);
       setWeather5Days(urlinfodays.data);
     } catch (err) {
-      console.error(err);  
+      console.error(err);
       setError("Cidade não encontrada ou erro na busca.");
       setWeather(undefined);
       setWeather5Days(undefined);
@@ -49,7 +50,9 @@ function App() {
           type="text"
           placeholder="Digite o nome da cidade"
         />
-        <button onClick={searchCity}>Buscar</button>
+        <button onClick={searchCity}>
+          <FaSearch /> Buscar
+        </button>
       </div>
 
       {loading && <p className="loading">Carregando dados...</p>}
