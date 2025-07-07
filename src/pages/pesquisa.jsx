@@ -3,6 +3,7 @@ import WeatherInformations5Days from './components/WeatherInformations5Days/Weat
 import { FaSearch } from 'react-icons/fa';
 import { useState, useRef } from 'react';
 import axios from 'axios';
+import '../pages/pesquisa.css'
 
 export default function Pesquisa() {
   const [weather, setWeather] = useState();
