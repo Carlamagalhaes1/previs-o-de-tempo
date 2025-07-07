@@ -1,12 +1,10 @@
-
 import WeatherInformations from './components/WeatherInformations/WeatherInformations';
 import WeatherInformations5Days from './components/WeatherInformations5Days/WeatherInformations5Days';
 import { FaSearch } from 'react-icons/fa';
 import { useState, useRef } from 'react';
 import axios from 'axios';
 
-export default function Pesquisa ()
-
+export default function Pesquisa() {
   const [weather, setWeather] = useState();
   const [weather5Days, setWeather5Days] = useState();
   const [loading, setLoading] = useState(false);
@@ -41,11 +39,8 @@ export default function Pesquisa ()
     }
   }
 
-
-{
-    return (
-         <div className="container">
-      
+  return (
+    <div className="container">
       <h1 className="title">Previsão do Tempo</h1>
 
       <div className="search-box">
@@ -58,16 +53,14 @@ export default function Pesquisa ()
           <FaSearch /> Buscar
         </button>
       </div>
-      
 
-     
-    </div>
-     {loading && <p className="loading">Carregando dados...</p>}
+      {loading && <p className="loading">Carregando dados...</p>}
       {error && <p className="error">{error}</p>}
 
       {!loading && weather && <WeatherInformations weather={weather} />}
-      {!loading && weather5Days && <WeatherInformations5Days weather5Days={weather5Days} />}
-      </div>
-    )
-    
+      {!loading && weather5Days && (
+        <WeatherInformations5Days weather5Days={weather5Days} />
+      )}
+    </div>
+  );
 }
