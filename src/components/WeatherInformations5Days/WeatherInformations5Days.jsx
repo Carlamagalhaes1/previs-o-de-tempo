@@ -33,7 +33,7 @@ function WeatherInformations5Days({ weather5Days }) {
             <p className="forecast-desc">{forecast.weather[0].description}</p>
             <p>
               {Math.round(forecast.main.temp_min)}℃ min /{" "}
-              {Math.round(forecast.main.temp_max)}℃ max
+              {Math.round(forecast.main.temp_max)}℃ maximo
             </p>
           </div>
         ))}
